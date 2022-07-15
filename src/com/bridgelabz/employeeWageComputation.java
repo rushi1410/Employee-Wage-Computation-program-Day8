@@ -1,13 +1,12 @@
 package com.bridgelabz;
-
 public class employeeWageComputation {
-	public static void main(String[] args) {
-		final int PART_TIME = 1;
-		final int FULL_TIME = 2;
-		final int WAGE_PER_HR = 20;
-		final int MAX_WORKING_DAYS = 20;
-		final int MAX_WORKING_HRS = 100;
+	public static final int PART_TIME = 1;
+	public static final int FULL_TIME = 2;
+	public static final int WAGE_PER_HR = 20;
+	public static final int MAX_WORKING_DAYS = 20;
+	public static final int MAX_WORKING_HRS = 100;
 
+	public static int computeWage() {
 		int totalWage = 0;
 		int workingHrs = 0;
 		System.out.printf("%5s     %5s     %5s     %5s\n", "Day", "Workinghrs", "Wage", "Total working hrs");
@@ -33,6 +32,11 @@ public class employeeWageComputation {
 			System.out.printf("%5d       %5d      %5d      %5d\n", day, workingHrs, wage, totalWorkingHrs + workingHrs);
 
 		}
+
 		System.out.println("Total wage for a month is " + totalWage);
-	}	
+		return totalWage;
+	}
+	public static void main(String[] args) {
+		computeWage();
+	}
 }
